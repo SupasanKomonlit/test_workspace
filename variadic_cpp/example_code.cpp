@@ -11,18 +11,21 @@
 template<typename T> 
 T adder(T v)
 {
+    printf("function 1 parameter\n");
+    std::cout << __PRETTY_FUNCTION__ << "\n"; // you can use this to show about all parameter
     return v;
 }
 
 template<typename T , typename... Args >
 T adder( T first, Args... argc )
 {
-    printf("function 2 parmeter\n");
+    printf("function 2 parmeter have number of argument is %d\n" , first );
+    std::cout << __PRETTY_FUNCTION__ << "\n"; // you can use this to show about all parameter
     return first + adder( argc... );
 }
 
 int main()
 {
-    int answer = adder( 1 , 2 , 3 , 4 );
+    int answer = adder( 5 , 4 , 2 , 1 , 3);
     printf( "Last answer is %d\n" , answer );
 }
