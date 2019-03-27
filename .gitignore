@@ -30,4 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Writing file
 *.swp
+
+# Build directory
+build
+install
+log
