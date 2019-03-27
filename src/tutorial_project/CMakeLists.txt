@@ -8,7 +8,7 @@ set( tutorial_project_VERSION_MINOR 0 )
 # configure a header file to pass some of the CMake setting to the source code
 configure_file(
     "${PROJECT_SOURCE_DIR}/tutorial_project_config.h.in"
-    "${PROJECT_BINARY_DIR}/tutorial_project_config.h"
+    "${PROJECT_BINARY_DIR}/tutorial_project_config_binary.h"
 )
 
 include_directories("${PROJECT_BINARY_DIR}")
