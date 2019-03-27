@@ -4,6 +4,7 @@
 #include    <vector>
 
 #include    <tutorial_project_config_binary.h>
+#include    <PushInVector/push_data.cpp>
 
 int main( int argc , char *argv[] )
 {
@@ -11,10 +12,8 @@ int main( int argc , char *argv[] )
     printf("data of tutorial_project_VERSION_MINOR : %d\n\n" , tutorial_project_VERSION_MINOR );
     std::vector< unsigned char > buffer;
     buffer.reserve( 100 );
-    for( int run = 0 ; run < 15 ; run++ )
-    {
-        buffer.push_back( run );
-    }
+
+    push_data( &buffer , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8);
     
     printf("size member     : %ld\n" , buffer.size() );
     printf("capacity buffer : %ld\n" , buffer.capacity() );

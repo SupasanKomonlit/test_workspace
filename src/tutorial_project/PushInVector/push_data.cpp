@@ -1,5 +1,4 @@
-#include    <iostream>
-#include    <vector>
+#include    <PushInVector/push_data.hpp>
 
 template<typename buffer_type , typename single_type>
 void push_data( std::vector<buffer_type>* buffer , single_type data )

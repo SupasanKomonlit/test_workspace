@@ -11,6 +11,10 @@ configure_file(
     "${PROJECT_BINARY_DIR}/tutorial_project_config_binary.h"
 )
 
-include_directories("${PROJECT_BINARY_DIR}")
+include_directories(
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}"
+)
+add_subdirectory( PushInVector )
 
 add_executable( tutorial tutorial.cpp) # you will found find tutorial at build/tutorial_project
