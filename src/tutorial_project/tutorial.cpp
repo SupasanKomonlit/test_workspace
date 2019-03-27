@@ -3,7 +3,7 @@
 #include    <math.h>
 #include    <vector>
 
-#include    "tutorial_project_config_binary.h"
+#include    <tutorial_project_config_binary.h>
 
 int main( int argc , char *argv[] )
 {
