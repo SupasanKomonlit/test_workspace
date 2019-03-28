@@ -1,0 +1,3 @@
+#define TUTORIAL_PROJECT_DIR_ "@tutorial_project_dir@"
+#define TUTORIAL_PROJECT_INCLUDE_DIR_ "@tutorial_project_include_dir@"
+#define TUTORIAL_PROJECT_LIBRARY_DIR_ "@tutorial_project_library_dir@"
