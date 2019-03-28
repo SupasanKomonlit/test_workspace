@@ -18,9 +18,9 @@ int main( int argc , char *argv[] )
     push_data( &buffer , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8);
 #endif
     
-    printf("size member     : %ld\n" , buffer.size() );
+    printf("size member     : %li\n" , buffer.size() );
     printf("capacity buffer : %ld\n" , buffer.capacity() );
-    printf("max size buffer : %d\n" , buffer.max_size() );
+    printf("max size buffer : %ld\n" , buffer.max_size() );
 
     return 0;
 }
