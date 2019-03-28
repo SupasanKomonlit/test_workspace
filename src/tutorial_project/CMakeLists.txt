@@ -24,3 +24,6 @@ endif( USE_MY_PUSH_DATA )
 
 add_executable( tutorial tutorial.cpp) # you will found find tutorial at build/tutorial_project
 target_link_libraries( tutorial ${EXTRA_LIBS} )
+
+install( TARGETS tutorial DESTINATION bin )
+install( FILES "${PROJECT_BINARY_DIR}/tutorial_project_config_binary.h" DESTINATION include )
