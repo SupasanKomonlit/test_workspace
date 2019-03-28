@@ -7,6 +7,8 @@ set( tutorial_project_VERSION_MINOR 0 )
 
 option( USE_MY_PUSH_DATA "Use variadic function to push data" ON )
 
+find_package( ament_cmake REQUIRED )
+
 # configure a header file to pass some of the CMake setting to the source code
 configure_file(
     "${PROJECT_SOURCE_DIR}/tutorial_project_config.h.in"
@@ -27,3 +29,5 @@ target_link_libraries( tutorial ${EXTRA_LIBS} )
 
 install( TARGETS tutorial DESTINATION bin )
 install( FILES "${PROJECT_BINARY_DIR}/tutorial_project_config_binary.h" DESTINATION include )
+
+ament_package()
