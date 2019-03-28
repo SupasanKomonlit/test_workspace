@@ -31,8 +31,6 @@ ament_export_include_directories( "${PROJECT_SOURCE_DIR}/PushInVector"
     "${PROJECT_BINARY_DIR}"
 )
 
-ament_export_libraries( PushInVector )
-
 install( TARGETS tutorial DESTINATION bin )
 install( FILES "${PROJECT_BINARY_DIR}/tutorial_project_config_binary.h" DESTINATION include )
 

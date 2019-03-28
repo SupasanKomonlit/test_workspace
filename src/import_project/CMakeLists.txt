@@ -2,11 +2,11 @@ cmake_minimum_required( VERSION 3.5 )
 project( import_project )
 
 find_package( ament_cmake REQUIRED )
-find_package( tutorial_project REQUIRED COMPONENT)
+find_package( tutorial_project REQUIRED)
 
 set( tutorial_project_dir ${tutorial_project_DIR})
 set( tutorial_project_include_dir ${tutorial_project_INCLUDE_DIRS})
-set( tutorial_project_library_dir ${tutorial_project_LIBRARY_DIRS})
+set( tutorial_project_library_dir ${tutorial_project_LIBRARIES})
 
 configure_file(
     "${PROJECT_SOURCE_DIR}/import_project_configure.hpp.in"
