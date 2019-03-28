@@ -1,1 +1,1 @@
-add_library( PushInVector SHARED push_data.cpp)
+add_library( PushInVector push_data.cpp)

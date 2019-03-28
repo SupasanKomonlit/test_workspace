@@ -1,3 +1,5 @@
 // the configured options and settings for Tutorial
 #define tutorial_project_VERSION_MAJOR @tutorial_project_VERSION_MAJOR@
 #define tutorial_project_VERSION_MINOR @tutorial_project_VERSION_MINOR@
+
+#cmakedefine USE_MY_PUSH_DATA

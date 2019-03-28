@@ -5,6 +5,8 @@ project( tutorial_project )
 set( tutorial_project_VERSION_MAJOR 1 )
 set( tutorial_project_VERSION_MINOR 0 )
 
+option( USE_MY_PUSH_DATA "Use variadic function to push data" ON )
+
 # configure a header file to pass some of the CMake setting to the source code
 configure_file(
     "${PROJECT_SOURCE_DIR}/tutorial_project_config.h.in"
@@ -13,8 +15,12 @@ configure_file(
 
 include_directories(
     "${PROJECT_BINARY_DIR}"
-    "${PROJECT_SOURCE_DIR}"
 )
-add_subdirectory( PushInVector )
+if( USE_MY_PUSH_DATA )
+    include_directories( "${PROJECT_SOURCE_DIR}/PushInVector")
+    add_subdirectory( PushInVector )
+    set( EXTRA_LIBS ${EXTRA_LIBS} PushInVector )
+endif( USE_MY_PUSH_DATA )
 
 add_executable( tutorial tutorial.cpp) # you will found find tutorial at build/tutorial_project
+target_link_libraries( tutorial ${EXTRA_LIBS} )
