@@ -10,9 +10,9 @@ import sys
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
 
-
 if __name__=="__main__":
     sc = SparkContext( appName="TestSparkSteaming" )
+    sc.setLogLevel("OFF") # reference https://spark.apache.org/docs/2.3.0/api/python/pyspark.html#pyspark.SparkContext
     ssc = StreamingContext( sc , 1 ) 
     # Create a local StreamingContext with 2 working thread and batch interval of 1 second
     
