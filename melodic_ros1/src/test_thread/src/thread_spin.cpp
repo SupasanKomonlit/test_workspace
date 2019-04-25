@@ -45,7 +45,7 @@ void thread_spin( ros::NodeHandle* node_handle )
     {
         std::cout   << "node didn't ok\n";
     }
-    std::cout   << "End function spin\n";
+    std::cout   << "End function thread_spin\n";
 }
 
 void callback( const std_msgs::Int64& message )
