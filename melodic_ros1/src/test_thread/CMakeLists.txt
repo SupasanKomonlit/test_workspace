@@ -133,6 +133,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(spin_node src/thread_spin.cpp)
+add_executable(multi_node src/multiple_spin.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -149,6 +150,9 @@ target_link_libraries(spin_node
   ${catkin_LIBRARIES}
 )
 
+target_link_libraries(multi_node
+  ${catkin_LIBRARIES}
+)
 #############
 ## Install ##
 #############
