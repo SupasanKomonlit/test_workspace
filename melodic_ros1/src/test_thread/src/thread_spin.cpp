@@ -18,13 +18,16 @@ int main( int argv , char** argc )
 
     ros::Subscriber sub_int64 = nh.subscribe( "test_thread/int64" , 1 , &callback );
 
-    ros::Rate rate( 10 );
+    ros::Rate rate( 5 );
 
-    std::thread spin_thread( &thread_spin , &nh ); 
+    std::thread spin_thread( &thread_spin , &nh );
+
+    int count = 0; 
 
     while( nh.ok() )
     {
-        std::cout   << "In loop nh.ok()\n";
+        count++;
+        std::cout   << "In loop nh.ok() count is " << count  << std::endl;
         rate.sleep();
     }
 
